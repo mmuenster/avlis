@@ -1,0 +1,41 @@
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="dxCodeEditorController">
+    <form role="form" name="edit" ng-submit="editCode()">
+      <div class="form-group">
+        <input class="form-control" type="text" name="codeToEdit" ng-model="codeToEdit" > Code to Edit <br/>
+        <button class="btn btn-default" type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+
+    <div>
+        <h1>{{codeToEdit | uppercase}}</h1> <br/>
+      <form role="form" name="edit" ng-submit="submitCode()">
+        <div class="form-group"> 
+          Diagnosis Line: 
+          <textarea class="form-control" type="text" name="diagnosisLine" ng-model="editFields[2]"></textarea><br/>
+          Comment:        
+          <textarea class="form-control" type="text" name="commentLine" ng-model="editFields[3]"></textarea><br/>
+          Micro:          
+          <textarea class="form-control" type="text" name="microscopicDesciption" ng-model="editFields[4]"></textarea><br/>
+        </div>
+        <div class="form-inline">  
+          <label for="category" class="control-label">Category:</label>
+          <input class="form-control" type="text" name="category" ng-model="editFields[0]" />
+          <label for="" class="control-label">Subcategory:</label>
+          <input class="form-control" type="text" name="subcategory" ng-model="editFields[1]" />
+          <label for="" class="control-label">CPT Codes (separated by spaces)</label>
+          <input class="form-control" type="text" name="cptCodes" ng-model="editFields[5]" />
+          <label for="" class="control-label">ICD9 Code:</label>
+          <input class="form-control" type="text" name="icd9code" ng-model="editFields[6]" />
+          <label for="" class="control-label">ICD10 Code:</label>
+          <input class="form-control" type="text" name="icd10code" ng-model="editFields[7]" />
+          <label for="" class="control-label">Future use:</label>
+          <input class="form-control" type="text" name="icd10code" ng-model="editFields[7]" />
+          </div>
+          <div>
+          <button class="btn btn-primary" type="submit" id="submitEdits">Submit Edits</button>
+
+          <input type="text" ng-model="submitMessage"></input>
+        </div>
+      </form>
+    </div>  
+  </div>

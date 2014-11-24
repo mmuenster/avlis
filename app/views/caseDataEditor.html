@@ -1,0 +1,34 @@
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="caseDataEditorController">
+    <form name="edit" ng-submit="editCase()">
+        <input type="text" autofocus="true" id="input_codeToEdit" name="codeToEdit" ng-model="caseToEdit" > Case to Edit <br/>
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+
+    <input type="submit" hidden id="loadFields" value="Load (alt-h)" accesskey="h" ng-click="loadFields()">
+    <input type="button" hidden value="Next Blank (alt-g)" accesskey="g" ng-click="gotoNextBlank()">
+    <input type="button" hidden value="Enter code (alt-j)" accesskey="j" ng-click="dxCodeEntry()">
+
+    <div>
+      <form ng-show="editFields.caseNumber" name="edit" ng-submit="submitCase()">
+          <h1>{{editFields.caseNumber}}</h1>
+          <h3 id="patientName">{{editFields.name}}</h3>
+            Collected:{{editFields.collectionDate}}    Received: {{editFields.receivedDate}}</span></br>   
+          Age: <span id="patientAge">{{editFields.age}} year(s) old {{editFields.gender}}</span></br>
+          Doctor: <span id="doctor">{{editFields.doctor}} @ {{editFields.client}}</span></br>
+          Clinical Information: <input class="form-control" type="text" ng-model="editFields.clinicalInformation"></br>
+        <ul>
+          <li ng-repeat="(keys, values) in editFields.jars">
+            {{keys}}
+            <input class="form-control" type="text" ng-model="values.site"></input>  
+            <textarea class="form-control" type="text" ng-model = "values.grossDescription"></textarea>
+          </li>
+        </ul>
+
+        Diagnosis Line:<br/><textarea class="form-control" rows="15" cols="60" type="text" id="diagnosisTextArea" name="diagnosisLine" ng-model="editFields['diagnosisTextArea']"></textarea><br/>
+        Photo Caption:<br/><input class="form-control" type="text" ng-model="editFields.photoCaption"></input>
+        Comment:<br/><textarea class="form-control" rows="2" cols="60" type="text" name="commentLine" ng-model="editFields['commentTextArea']"></textarea><br/>
+        Microrosopic Description:<br/><textarea class="form-control" rows="2" cols="60" type="text" name="microscopicDescription" ng-model="editFields['microscopicDescriptionTextArea']"></textarea><br/>
+        <input type="submit" id="submitCase" value="Submit" /> <text type="text" ng-model="submitMessage"></text>
+      </form>
+    </div>  
+  </div>

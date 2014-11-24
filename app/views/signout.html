@@ -1,0 +1,10 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="signoutController">
+<h2>{{signoutMonitor}}</h2>  
+    <input type="button" id="signout" value="Signout" accesskey="s" ng-click="signout()" ng-show="currentUrl">
+    <input type="button" value="Skip" accesskey="k" ng-click="skip()" ng-show="currentUrl">
+    <input type="button" value="Remove" accesskey="r" ng-click="remove()" ng-show="currentUrl">
+    <input type="button" value="New CPT Codes" accesskey="n" ng-click="editCPTCodes()" ng-show="currentUrl"">
+ </br>
+
+<iframe ng-show="currentUrl" ng-src="{{currentUrl}}" width="600" height="800"></iframe>
+</div>
