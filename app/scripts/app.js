@@ -28,7 +28,7 @@ var avlisApp=angular
         templateUrl: 'views/dxCodeEditor.html',
         controller: 'dxCodeEditorController'
       }).
-      when('/Signout', {
+      when('/signout', {
         templateUrl: 'views/signout.html',
         controller: 'signoutController'
       }).
