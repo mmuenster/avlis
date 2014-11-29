@@ -10,6 +10,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -37,23 +38,25 @@
           <ul class="nav navbar-nav">
             <li ng-class="{ active: isCurrentPath('/main')}"><a href="#">Home</a></li>
             <li ng-class="{ active: isCurrentPath('/caseDataEditor')}"><a href="#/caseDataEditor">Edit Case</a></li>
-            <li ng-class="{ active: isCurrentPath('/dxCodeEditor')}"><a href="#/dxCodeEditor">Edit Codes</a></li>
             <li ng-class="{ active: isCurrentPath('/signout')}"><a href="#/signout">Signout</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <li> <a href="#">Link 1</a></li>
+            <li> <a href="#">Link 1</a></li>
+            <li> <a href="#">Link 1</a></li>
+            <li> <a href="#">Link 1</a></li>
+
+            <li class="btn-group" dropdown>
+              <button type="button" class="btn">Codes</button>
+              <button type="button" class="btn dropdown-toggle" dropdown-toggle>
+                <span class="caret"></span>
+              </button>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
+                <li><a href="#/dxCodeEditor">Edit Diagnosis Codes</a></li>
+                <li><a href="#/extendedPhraseEditor">Edit Extended Phrases</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
                 <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -113,7 +116,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    // <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -123,6 +126,7 @@
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -131,6 +135,7 @@
         <script src="scripts/controllers/caseDataEditor.js"></script>
         <script src="scripts/controllers/dxCodeEditor.js"></script>
         <script src="scripts/controllers/signoutController.js"></script>
+        <script src="scripts/controllers/extendedPhrasesController.js"></script>
         <!-- endbuild -->
   </body>
 </html>

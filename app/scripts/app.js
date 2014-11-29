@@ -16,7 +16,9 @@ var avlisApp=angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'firebase'
+    'firebase',
+    'ui.bootstrap',
+    'xeditable'
   ])
   .config(function($routeProvider) {
     $routeProvider.
@@ -31,6 +33,10 @@ var avlisApp=angular
       when('/signout', {
         templateUrl: 'views/signout.html',
         controller: 'signoutController'
+      }).
+      when('/extendedPhraseEditor', {
+        templateUrl: 'views/extendedPhraseEditor.html',
+        controller: 'extendedPhraseController'
       }).
       otherwise({
         redirectTo: '/main',
@@ -61,3 +67,11 @@ avlisApp.controller('LoginController', function ($scope, $rootScope, $firebaseAu
     };
 });
 
+avlisApp.run(function(editableOptions) {
+  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+});
+
+avlisApp.run(function($rootScope, $firebase){
+  var epRef= new Firebase('https://dazzling-torch-3393.firebaseio.com/extendedPhrases');
+  $rootScope.extendedPhrases = $firebase(epRef).$asArray();
+})
