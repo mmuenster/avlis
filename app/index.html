@@ -19,6 +19,7 @@
   </head>
 
   <body ng-app="avlisApp" style="padding-top: 70px">
+  <div class="container">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -39,10 +40,6 @@
             <li ng-class="{ active: isCurrentPath('/main')}"><a href="#">Home</a></li>
             <li ng-class="{ active: isCurrentPath('/caseDataEditor')}"><a href="#/caseDataEditor">Edit Case</a></li>
             <li ng-class="{ active: isCurrentPath('/signout')}"><a href="#/signout">Signout</a></li>
-            <li> <a href="#">Link 1</a></li>
-            <li> <a href="#">Link 1</a></li>
-            <li> <a href="#">Link 1</a></li>
-            <li> <a href="#">Link 1</a></li>
 
             <li class="btn-group" dropdown>
               <button type="button" class="btn">Codes</button>
@@ -63,6 +60,7 @@
     </nav>
 
     <div ng-view> </div>
+  </div>
 <!-- 
     <div class="container">
 
