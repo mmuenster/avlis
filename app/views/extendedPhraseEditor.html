@@ -3,13 +3,19 @@ Extended Phrase Editor
 
 <table class="table table-condensed table-hover">
 	<tr>
-		<th> Code </th>
 		<th>  </th>
+		<th> Code </th>
 		<th> Phrase </th>
 	</tr>
+	<tr>
+		<th> PLUS Sign </th>
+		<th> Code to Add </th>
+		<th> Phrase to Add </th>
+	</tr>
+
 	<tr ng-repeat="extPhrase in extendedPhrases" > 
-			<td> {{extPhrase.$id}} </td>
 			<td><button type="button" class="btn btn-default btn-xs" aria-label="Remove" ng-click="deleteExtPhrase(extPhrase)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+			<td> {{extPhrase.$id}} </td>
 			<td><a href="#" editable-textarea="extPhrase.$value" e-rows="6" e-cols="70" onaftersave="updateExtPhrase(extPhrase)">
 				{{extPhrase.$value}}</a> </td>
 

@@ -32,18 +32,18 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">
-            <img alt="Brand" src="AveroLogo.jpg" height="30" width="100">
+            <img alt="Brand" src="AveroLogoTransparent.gif" height="30" width="100">
           </a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-left navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li ng-class="{ active: isCurrentPath('/main')}"><a href="#">Home</a></li>
             <li ng-class="{ active: isCurrentPath('/caseDataEditor')}"><a href="#/caseDataEditor">Edit Case</a></li>
             <li ng-class="{ active: isCurrentPath('/signout')}"><a href="#/signout">Signout</a></li>
 
             <li class="btn-group" dropdown>
-              <button type="button" class="btn">Codes</button>
-              <button type="button" class="btn dropdown-toggle" dropdown-toggle>
+              <button type="button" class="btn navbar-btn">Codes</button>
+              <button type="button" class="btn navbar-btn dropdown-toggle" dropdown-toggle>
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
