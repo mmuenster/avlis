@@ -3,7 +3,7 @@
 avlisApp.controller('caseDataEditorController', function($scope, $firebase, $document) {
   var fb = new Firebase('https://dazzling-torch-3393.firebaseio.com');
   var caseDataRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/CaseData');
-  var queueRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/AveroQueue');
+  var queueRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/AveroQueue/mmuenster');
   var dxCodesRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/newDiagnosisCodes');
   var frontHelpersRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/frontHelpers');  
   var marginHelpersRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/marginHelpers');

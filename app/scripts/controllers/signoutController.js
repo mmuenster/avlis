@@ -4,7 +4,7 @@ avlisApp.controller('signoutController', ['$scope', '$firebase', '$location', '$
   var signoutQueueCount = 0;
   var signoutQueueProgressCounter = 0;
   var signoutQueue = {};
-  var queueRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/AveroQueue');
+  var queueRef = new Firebase('https://dazzling-torch-3393.firebaseio.com/AveroQueue/mmuenster');
   var queueSync = $firebase(queueRef).$asArray();
   
   queueSync.$loaded(function () {
